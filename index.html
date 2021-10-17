@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .loading {
+          display: flex;
+          justify-content: center;
+        }
+
+        .loading::after {
+          content: "";
+          width: 50px;
+          height: 50px;
+          border: 10px solid #dddddd; /*transparent*/
+          border-top-color: aquamarine;
+          border-bottom-color: aquamarine;
+          border-radius: 50%; /*circle*/
+          animation: loading 1s linear infinite;
+        }
+
+        .loading--full-height {
+          align-items: center;
+          height: 100%;
+        }
+
+        @keyframes  loading {
+          to {
+            transform: rotate(1turn);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div style="width:200px; height: 200px">
+      <div class="loading loading--full-height"></div>
+    </div>
+</body>
+</html>
